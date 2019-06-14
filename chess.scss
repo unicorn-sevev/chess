@@ -1,0 +1,73 @@
+@import "var";
+@import "mixin";
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.box{
+  width: $w;
+  height: $w;
+  @include center;
+  background: seagreen;
+}
+.chess{
+  width: $r * 2;
+  height: $r * 2;
+  border-radius: 50%;
+  float: left;
+  position: relative;
+  z-index: 999;
+}
+.black{
+  background: black;
+}
+.white{
+  background: white;
+}
+.h{
+  width: $w - $r * 2;
+  height: 1.5px;
+  background: #ff844e;
+  position: absolute;
+  left: $r;
+  transform: translate3d(-300%,0,0);
+  animation: through 1s 1 ease-in forwards;
+}
+
+.s{
+  height: $w - $r * 2;
+  width: 1.5px;
+  background: #ff844e;
+  position: absolute;
+  top: $r;
+  transform: translate3d(0,-300%,0);
+  animation: down 1s 1 ease-in forwards;
+}
+
+@for $i from 1 through 15{
+  .h:nth-of-type(#{$i}){
+    top: ( 2 * $i - 1 ) * $r;
+  }
+  .s:nth-of-type(#{$i}){
+    left: ( 2 * $i - 1 ) * $r;
+    animation-delay: 100ms * $i;
+  }
+}
+@keyframes down {
+  from{
+    transform: translate3d(0,-300%,0);
+  }to{
+  transform: translate3d(0,0,0);
+     }
+}
+@keyframes through {
+  from{
+    transform: translate3d(-300%,0,0);
+  }to{
+     transform: translate3d(0,0,0);
+   }
+}
+
+

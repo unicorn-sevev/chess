@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.box {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: seagreen; }
+
+.chess {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  float: left;
+  position: relative;
+  z-index: 999; }
+
+.black {
+  background: black; }
+
+.white {
+  background: white; }
+
+.h {
+  width: 560px;
+  height: 1.5px;
+  background: #ff844e;
+  position: absolute;
+  left: 20px;
+  transform: translate3d(-300%, 0, 0);
+  animation: through 1s 1 ease-in forwards; }
+
+.s {
+  height: 560px;
+  width: 1.5px;
+  background: #ff844e;
+  position: absolute;
+  top: 20px;
+  transform: translate3d(0, -300%, 0);
+  animation: down 1s 1 ease-in forwards; }
+
+.h:nth-of-type(1) {
+  top: 20px; }
+
+.s:nth-of-type(1) {
+  left: 20px;
+  animation-delay: 100ms; }
+
+.h:nth-of-type(2) {
+  top: 60px; }
+
+.s:nth-of-type(2) {
+  left: 60px;
+  animation-delay: 200ms; }
+
+.h:nth-of-type(3) {
+  top: 100px; }
+
+.s:nth-of-type(3) {
+  left: 100px;
+  animation-delay: 300ms; }
+
+.h:nth-of-type(4) {
+  top: 140px; }
+
+.s:nth-of-type(4) {
+  left: 140px;
+  animation-delay: 400ms; }
+
+.h:nth-of-type(5) {
+  top: 180px; }
+
+.s:nth-of-type(5) {
+  left: 180px;
+  animation-delay: 500ms; }
+
+.h:nth-of-type(6) {
+  top: 220px; }
+
+.s:nth-of-type(6) {
+  left: 220px;
+  animation-delay: 600ms; }
+
+.h:nth-of-type(7) {
+  top: 260px; }
+
+.s:nth-of-type(7) {
+  left: 260px;
+  animation-delay: 700ms; }
+
+.h:nth-of-type(8) {
+  top: 300px; }
+
+.s:nth-of-type(8) {
+  left: 300px;
+  animation-delay: 800ms; }
+
+.h:nth-of-type(9) {
+  top: 340px; }
+
+.s:nth-of-type(9) {
+  left: 340px;
+  animation-delay: 900ms; }
+
+.h:nth-of-type(10) {
+  top: 380px; }
+
+.s:nth-of-type(10) {
+  left: 380px;
+  animation-delay: 1000ms; }
+
+.h:nth-of-type(11) {
+  top: 420px; }
+
+.s:nth-of-type(11) {
+  left: 420px;
+  animation-delay: 1100ms; }
+
+.h:nth-of-type(12) {
+  top: 460px; }
+
+.s:nth-of-type(12) {
+  left: 460px;
+  animation-delay: 1200ms; }
+
+.h:nth-of-type(13) {
+  top: 500px; }
+
+.s:nth-of-type(13) {
+  left: 500px;
+  animation-delay: 1300ms; }
+
+.h:nth-of-type(14) {
+  top: 540px; }
+
+.s:nth-of-type(14) {
+  left: 540px;
+  animation-delay: 1400ms; }
+
+.h:nth-of-type(15) {
+  top: 580px; }
+
+.s:nth-of-type(15) {
+  left: 580px;
+  animation-delay: 1500ms; }
+
+@keyframes down {
+  from {
+    transform: translate3d(0, -300%, 0); }
+  to {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes through {
+  from {
+    transform: translate3d(-300%, 0, 0); }
+  to {
+    transform: translate3d(0, 0, 0); } }
